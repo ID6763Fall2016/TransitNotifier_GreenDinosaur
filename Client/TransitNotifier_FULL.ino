@@ -37,10 +37,9 @@ Adafruit_DotStar strip = Adafruit_DotStar(
 
 #include <ESP8266HTTPClient.h>
 
-#include "keys.h" // keys.h includes user definitions for WIFI_SSID and WIFI_KEY
-
 #define SERVER_ADDRESS  "X.X.X.X:3000"    // Node.js server IP:Port
-
+#define WIFI_SSID       "WiFi_name"
+#define WIFI_KEY        "WiFi_pass"
 
 ESP8266WiFiMulti WiFiMulti;
 
@@ -78,8 +77,7 @@ void setup() {
   }
 
   /* Connect to SSID with WPA */
-  WiFiMulti.addAP(WIFI_SSID_1, WIFI_KEY_1);
-  WiFiMulti.addAP(WIFI_SSID_2, WIFI_KEY_2);
+  WiFiMulti.addAP(WIFI_SSID, WIFI_KEY);
 
   /* Show ESP8266 Client MAC address */
   String clientMac = "";
