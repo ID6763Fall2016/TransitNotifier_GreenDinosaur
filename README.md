@@ -1,1 +1,1 @@
-# TransitNotifier_GreenDinosaur
+# Transit Notifier - Green Dinosaur
